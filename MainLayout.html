@@ -1,0 +1,22 @@
+<template name="MainLayout">
+	<header>
+		 <h1>Welcome to MyStuff!</h1>
+		 {{> loginButtons }}
+	</header>
+	<main>
+		{{> Template.dynamic template=main}}
+	</main>
+</template>
+
+<template name="dashboard">
+	{{> Sidenav}}
+	<main class="main-layout">
+
+	  <div class="new-recipe-container">
+	 		{{> searchBar}}
+	 </div>
+
+	  {{> addPostForm}}
+	  {{> showPostList }}
+	</main>
+</template>

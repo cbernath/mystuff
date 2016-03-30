@@ -1,0 +1,42 @@
+
+
+<template name="addPostForm">
+<div class="new-recipe-container">
+ <img class="photo" src="{{photo}}" >
+   <form class= "autoform-add-item">
+   		<label> Stuff Name: </label>
+         <input type="text" name ="title" placeholder = "A new post" >
+         <div class="wrapper-camera">
+          <a class="js-attach-image btn-camera"><span class="fa fa-camera"></span> Add your photo</a>
+        </div>
+        <button type="submit" class="btn"> Submit</button>
+      </form>
+
+      
+  </div>
+</template>
+
+<template name="showPostList">
+	
+
+	 {{#each posts}}
+	 	<article class="recipe">
+		 	<h3> {{title}}</h3>
+		 	<img class="photo" src="{{photo}}" >
+	 	</article>
+	 {{/each}}
+	
+	 
+	
+</template>
+
+<template name="Sidenav">
+	<nav class="side-nav">
+		<ul>
+			<li><a href=""><i class="fa fa-navicon"></i> Menu</a></li>
+			<li><a href=""><i class="fa fa-commenting"></i> Message</a></li>
+			<li><a href=""><i class="fa fa-desktop"></i>Other</a></li>
+		</ul>
+
+	</nav>	
+</template>
